@@ -1,0 +1,21 @@
+# version du docker-compose 
+version: "3"
+services:
+  monapp:
+    image: monimage
+    depends_on:
+      - redis
+    ports:
+      - "80:80"
+    networks:
+      - monreseau
+    environment:
+      - NOM=les amis
+  redis:
+    # vient de docker hub
+    image: redis
+    networks:
+      - monreseau
+
+networks:
+  monreseau:

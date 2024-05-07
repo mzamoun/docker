@@ -1,0 +1,11 @@
+sudo snap install docker 
+
+# check that is installed 
+sudo docker run hello-world
+
+# run an image ubuntu and a bash in it 
+sudo docker run -it ubuntu bash 
+
+#in another tab, show list of images runing 
+sudo docker ps 
+
